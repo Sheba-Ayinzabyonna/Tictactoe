@@ -10,32 +10,62 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,700;1,100&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/Tictactoe/css/index.css" />
+    <script
+      src="https://kit.fontawesome.com/f853190fea.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Tic-Tac-Toe</title>
   </head>
   <body>
     <main>
       <div class="grid">
-        <div class="turn"></div>
-        <div class="actions"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="square"></div>
-        <div class="score"></div>
-        <div class="score"></div>
-        <div class="score"></div>
+        <!-- Turn indicator -->
+        <div class="turn">
+          <i class="fa-solid fa-xmark"></i>
+          <!-- <i class="fas fa-angle-up"></i> -->
+          <p>Player 1, you're up!</p>
+        </div>
+        <!-- Dropdown menu-->
+        <div class="menu">
+          <button class="menu-btn">
+            Actions
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+          <div class="items border hidden">
+            <button>Reset</button>
+            <button>New Round</button>
+          </div>
+        </div>
+        <!-- Game board -->
+        <!-- <div class="actions"></div> -->
+        <div class="square shadow"></div>
+        <div class="square shadow"></div>
+        <div class="square shadow"></div>
+        <div class="square shadow"></div>
+        <div class="square shadow"></div>
+        <div class="square shadow"></div>
+        <div class="square shadow"></div>
+        <div class="square shadow"></div>
+        <div class="square shadow"></div>
+
+        <!-- Scoreboard -->
+        <div class="score shadow" style="background-color: #3f7d">
+          <p>Player 1</p>
+          <span>0 wins</span>
+        </div>
+        <div class="score shadow" style="background-color: #ffff">
+          <p>Ties</p>
+          <span>0</span>
+        </div>
+        <div class="score shadow" style="background-color: #ff950f">
+          <p>Player 2</p>
+          <span>0 wins</span>
+        </div>
       </div>
     </main>
     <footer>
-      <p>
-        Developed by <a href="https://twitter.com/ShebaAyinza">@ShebaAyinza</a>
-      </p>
+      <p>Developed by <a href="https://twitter.com/ShebaAyinza">Sheba </a></p>
     </footer>
   </body>
 </html>

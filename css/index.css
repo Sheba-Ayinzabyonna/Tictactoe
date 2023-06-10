@@ -23,13 +23,33 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 90px;
 }
 
 html,body{
     height:100%;
-    background-color:var(--darkgray);
+    background-color:var(--gray);
 
 }
+
+/* shared utility classes */
+.hidden{
+    display:none !important;
+}
+.office-green {
+    color:var(--office-green)
+}
+.apple-green {
+    color:var(--apple-green)
+}
+.shadow{
+    box-shadow: rgba(0,0,0,0.4) 0px 2px, 4px, rgba(0,0,0,0.3) 0px 7px 13px -3px, rgba(0,0,0,0.2);
+}
+.border{
+    border:1px solid rgba(211,211,211,0.0) !important
+}
+
+
 
 /*grid styles*/
 .grid{
@@ -49,25 +69,114 @@ html,body{
 }
 
 .turn{
-    background-color:white;
+    color:#FF950f;
     grid-column-start: 1;
     grid-column-end:3 ;
+    align-self: center;
+    display:flex;
+    align-items: center;
+    gap:20px;
 }
-.square{
-    background-color: #3F7D20;
+@keyframes turn-text-animation{
+    0%{
+        opacity:0;
+        transform:translateX(-20px); 
+    }
+    100%{
+        opacity: 100%;
+        transform:translateX(0);
+    }
+}
+.turn p{
+    font-size: 14px;
+    animation: 0.6s ease-in-out turn-text-animation;
+}
+
+@keyframes turn-icon-animation{
+    0%{
+        transform:scale(1);
+    }
+    25%{
+        transform:scale(1.4);
+    }
+    100%{
+        transform:scale(1);
+    }
+}
+
+.turn i{
+    font-size: 1.8rem;
+    margin-left: 10px;
+    animation: 0.6s ease-in-out turn-icon-animation;
+}
+/* menu styles */
+.menu{
+    position:relative;
+}
+.menu-btn{
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    border-radius: 10px;
+    color:white;
+    background-color:#72B01D;
+    /* background-color: rgba(211, 211, 211,0.05); */
+    border:1px solid transparent;
+}
+
+.items{
+    position:absolute;
+    z-index:10;
+    top:60px;
+    right:0;
+    background-color:#FF950f;
+    border-radius:2px;
+    padding:10px;
+}
+
+.items button{
+    background-color: transparent;
+    padding:8px;
+    color:white;
 
 }
+
+.menu .items button:hover{
+    text-decoration: underline;
+    cursor:pointer;
+}
+.square{
+    background-color: #016F79;
+    border-radius:10px;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    font-size:3rem;
+
+}
+.square:hover{
+    cursor:pointer;
+    opacity:90%;
+}
 .score{
-    background-color:   #FF9505;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    border-radius: 10px;
 
 }
 .actions{
-    background-color:#016FB9;
+    background-color:#016F79;
 }
 /*footer styles*/
 footer{
     color:white;
-    margin-top: 50px;
+    margin-top: 10px;
 
 }
 footer p{
