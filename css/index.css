@@ -33,6 +33,11 @@ html,body{
 }
 
 /* shared utility classes */
+
+button:hover{
+    cursor:pointer;
+    opacity:90%;
+}
 .hidden{
     display:none !important;
 }
@@ -170,6 +175,15 @@ html,body{
     border-radius: 10px;
 
 }
+.score p{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.score span{
+    font-size: 12px;
+    margin-top: 2px ;
+}
 .actions{
     background-color:#016F79;
 }
@@ -187,4 +201,36 @@ footer p{
 footer a{
     color: var(--apple-green);
 }
+/* Modal styles - opens when the game finishes */
+.modal{
+    display:flex;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.6);
+}
 
+.modal-contents{
+    transform: translateY(-80px);
+    height: 150px;
+    width: 100%;
+    max-width: 300px;
+    background-color: #454955;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color:white;
+    margin: 10px;
+}
+
+.modal-contents button{
+    padding: 10px;
+    background-color: #FF950f;
+    color: #0D0A0B;
+    border-radius: 3px;
+}
